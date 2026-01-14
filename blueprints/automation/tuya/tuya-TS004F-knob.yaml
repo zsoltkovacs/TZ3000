@@ -3,12 +3,12 @@ blueprint:
   name: ZHA - Tuya - TS004F Smart Knob - Custom Actions
 
   description: >-
-    Questa automazione aggiunge trigger per tutte le azioni del telecomando a manopola rotante Tuya TS004F. 
-    Può essere utilizzato sia in modalità Comando/Dimmer che Evento/Scena. Entrambe le modalità hanno le proprie azioni.
-    In modalità Command/Dimmer la configurazione è per lo più interna tranne che per la pressione del pulsante. 
-    In modalità Evento/Scena puoi selezionare le tue azioni. 
-    Per cambiare modalità è possibile premere il pulsante 3 volte velocemente.
-    Venduto su AliExpress da marchi come Moes, Girier ecc.
+    This automation adds triggers for all actions of the Tuya TS004F rotating knob remote. 
+    It can be used in both Command/Dimmer and Event/Scene mode. Both modes have their own actions.
+    In Command/Dimmer mode the configuration is mostly internal except for the button press. 
+    In Event/Scene mode you can select your actions. 
+    To change mode you can press the button 3 times quickly.
+    Sold on AliExpress by brands like Moes, Girier etc.
 
   domain: automation
 
@@ -26,8 +26,8 @@ blueprint:
             - queued
             - parallel
     max:
-      name: Automazione Max Esecuzioni
-      description: Il numero massimo di esecuzioni che possono essere eseguite e messe in coda alla volta.
+      name: Automation Max Executions
+      description: The maximum number of executions that can be run and queued at the same time.
       default: 10
       selector:
         number:
@@ -36,11 +36,11 @@ blueprint:
           max: 100
     remote:
       name: Tuya - TS004F Smart Knob
-      description: Seleziona il telecomando che desideri utilizzare.
+      description: Select the remote you want to use.
       selector:
         device:
           integration: zha
-          manufacturer: _TZ3000_qja6nq5z
+          manufacturer: _TZ3000_gwkzibhs
           model: TS004F
     light:
       name: Light (Command/Dimmer mode)
